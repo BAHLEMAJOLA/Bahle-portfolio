@@ -322,17 +322,6 @@ nav {
     display: block;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown.active .dropdown-content {
-    display: block;
-}
 
 /* Button */
 .btn {
@@ -348,46 +337,50 @@ nav {
     color: white;
     cursor: pointer;
 }
-
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
     nav {
-        flex-direction: column;
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-start; /* Align items to the start */
     }
 
     .links {
-        flex-direction: column;
-        display: none;
-        width: 100%;
+        flex-direction: column; /* Stack links vertically */
+        display: none; /* Initially hide links */
+        width: 100%; /* Full width for links */
     }
 
     .links.active {
-        display: flex;
+        display: flex; /* Show links when active */
     }
 
     .links li {
-        width: 100%;
-        text-align: center;
+        width: 100%; /* Full width for each link */
+        text-align: center; /* Center text */
     }
 
     .dropdown-content {
-        position: relative;
+        position: absolute; /* Changed to absolute for better positioning */
         background-color: #333;
-        box-shadow: none;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Add some shadow for visibility */
+        display: none; /* Initially hide dropdown content */
+        z-index: 1; /* Ensure it appears above other elements */
+        width: 100%; /* Full width for dropdown */
     }
 
     .dropdown:hover .dropdown-content {
         display: none; /* Disable hover effect on mobile */
     }
 
-    .dropdown-content.active {
-        display: block; /* Enable display on mobile */
+    .dropdown.active .dropdown-content {
+        display: block; /* Show dropdown when active */
     }
 
     #menu.active + .links {
-        display: flex;
+        display: flex; /* Show links when menu is active */
     }
 }
+
 
 
 /* General Section Styling */
@@ -400,10 +393,8 @@ nav {
 .hidden {
     display: none;
 }
-
-/* Footer always stays at the bottom */
 footer {
-    background-color: var(--second-background);
+    background-color: var(--second-background); /* Adjust this to your desired color */
     text-align: center;
     padding: 1em 0;
     color: white;
@@ -412,16 +403,30 @@ footer {
     width: 100%;
 }
 
-/* Footer remains after each section */
-body {
+.footer-content {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center; /* Center align items */
 }
 
-section {
-    flex: 1;
+.social-icons {
+    margin-top: 10px; /* Space between text and icons */
 }
+
+.social-icons a {
+    margin: 0 10px; /* Space between icons */
+}
+
+.social-icons img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Keep icons uniform */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
 
 /* For the dropdown menu to work on small screens */
 .dropdown-content {
