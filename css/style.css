@@ -427,6 +427,17 @@ footer {
     transform: scale(1.1); /* Scale effect on hover */
 }
 
+.social-icons a {
+    margin: 0 10px;
+    color: white; /* Change color to fit your design */
+    font-size: 24px; /* Adjust size */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
 
 /* For the dropdown menu to work on small screens */
 .dropdown-content {
