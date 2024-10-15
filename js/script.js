@@ -1,4 +1,3 @@
- // Toggle Navigation Menu on Mobile
 const menu = document.getElementById('menu');
 const links = document.querySelector('ul.links');
 const contactBtn = document.querySelector('.btn');
@@ -8,7 +7,7 @@ menu.addEventListener('click', () => {
     contactBtn.classList.toggle('active');
 });
 
-// Close the menu when a link is clicked (optional for better UX)
+// Optional: Close the menu when a link is clicked
 const navLinks = document.querySelectorAll('ul.links a');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -16,14 +15,3 @@ navLinks.forEach(link => {
         contactBtn.classList.remove('active');
     });
 });
-function showSection(sectionId) {
-    // Hide all sections first
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => {
-        section.classList.add('hidden');
-    });
-
-    // Show the clicked section
-    const targetSection = document.getElementById(sectionId);
-    targetSection.classList.remove('hidden');
-}

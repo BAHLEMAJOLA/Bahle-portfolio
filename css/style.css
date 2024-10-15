@@ -1038,6 +1038,18 @@ ul.links {
     line-height: 1.6;
 }
 
+
+.links.active {
+    display: flex;
+    flex-direction: column; /* Ensure vertical layout */
+    width: 100%;
+}
+
+.links li {
+    width: 100%;
+    text-align: center;
+}
+
 @media screen and (max-width: 768px) {
     .timeline-item {
         flex-direction: column;
