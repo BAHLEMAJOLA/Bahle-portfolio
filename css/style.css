@@ -322,6 +322,18 @@ nav {
     display: block;
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
 /* Button */
 .btn {
     background-color: #ff4081;
