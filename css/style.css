@@ -164,7 +164,7 @@ section{
 }
 #about {
     position: relative;
-    background-image: url('ME.jpg'); /* Add your background image URL */
+    background-image: url('../images/ME.jpg'); /* Add your background image URL */
     background-size: cover; /* Make background image cover the whole section */
     background-position: center; /* Center the background image */
     display: flex;
@@ -428,7 +428,7 @@ section {
 
 
 #Service {
-    background-image: url('DD.jpg'); /* Add your background image path here */
+    background-image: url('../images/DD.jpg'); /* Add your background image path here */
     background-size: cover; /* Ensures the background covers the entire section */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the background from repeating */
@@ -492,7 +492,7 @@ section {
 }
 
 #Contact {
-    background-image: url('bee.jpg'); /* Replace with your actual image path */
+    background-image: url('../images/bee.jpg'); /* Replace with your actual image path */
     background-size: cover; /* Ensures the background covers the entire section */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the background from repeating */
@@ -822,7 +822,7 @@ ul.links {
 
   /* Achievements Section */
 #achievements {
-    background-image: url('AC.avif'); /* Replace with your background image */
+    background-image: url('../images/AC.avif'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
     padding: 4em 0;
@@ -920,7 +920,7 @@ ul.links {
 }
 
 #projects {
-    background-image: url('45.avif'); /* Replace with your background image */
+    background-image: url('../images/45.avif'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
     padding: 4em;
@@ -968,7 +968,7 @@ ul.links {
 #experience {
     background-color: #f0f2f5; /* Light background for contrast */
     padding: 4em;
-    background-image: url('background.jpg'); /* Background picture */
+    background-image: url('../images/background.jpg'); /* Background picture */
     background-size: cover;
     background-position: center;
 }
