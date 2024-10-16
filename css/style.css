@@ -518,7 +518,6 @@ footer {
     min-width: 20px;
     border-radius: 0.5em;
 }
-
 #Contact {
     background-image: url('../images/bee.jpg'); /* Replace with your actual image path */
     background-size: cover; /* Ensures the background covers the entire section */
@@ -526,11 +525,6 @@ footer {
     background-repeat: no-repeat; /* Prevents the background from repeating */
     padding: 2em; /* Adds some padding around the section */
     border-radius: 0.5em; /* Rounds the corners of the section */
-}
-
-#Contact {
-    background-color: var(--second-background);
-    padding: 2em; /* Add padding to the section */
 }
 
 form {
