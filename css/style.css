@@ -95,7 +95,7 @@ section{
     width: 18vw;
     height: 18vw; /* Ensures the image maintains a circular shape */
     border-radius: 50%; /* Circular shape */
-    margin-top: 3em;
+    margin-top: 89px;
     object-fit: cover; /* Ensures the image covers the circle without distortion */
     border: 2px solid #fff; /* Optional: add a border for better visual appeal */
 }
@@ -164,7 +164,7 @@ section{
 }
 #about {
     position: relative;
-    background-image: url('../images/ME.jpg'); /* Add your background image URL */
+    background-image: url('../images/aboutme.avif'); /* Add your background image URL */
     background-size: cover; /* Make background image cover the whole section */
     background-position: center; /* Center the background image */
     display: flex;
@@ -183,6 +183,7 @@ section{
     width: 100%;
     max-width: 800px; /* Limit the width of the content */
 }
+
 
 .about-image {
     width: 30vw;
@@ -207,16 +208,32 @@ section{
 }
 
 .about-box p {
-    color: white;
+    color: black;
     opacity: 0.9; /* Increased opacity for better visibility */
 }
+    .about-box p{
+        padding: 0 80px;
+        min-width: 700px;
 
-.about-box h2 {
-    font-size: 2.5em;
-    color: #ffcc00;
-    margin-top: 1em;
+    }
+.tech-soft-skills{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+
+}
+.text-container{
+    max-width: 700px;
 }
 
+.about-box .about-header {
+    text-align: center;
+}
+
+.about-box h2{
+    font-size: 2.5em;
+    color: #ffcc00;
+}
 .soft-skills {
     display: flex;
     flex-direction: column;
@@ -231,18 +248,6 @@ section{
     gap: 0.5em; /* Space between icon and text */
 }
 
-.progress-bar {
-    background-color: rgba(255, 255, 255, 0.2); /* Background for progress bar */
-    border-radius: 0.5em;
-    height: 1em; /* Height of the progress bar */
-    overflow: hidden; /* Ensure child does not overflow */
-}
-
-.progress {
-    background-color: #ffcc00; /* Color of the progress */
-    height: 100%; /* Fill the height of the progress bar */
-    border-radius: 0.5em; /* Rounded corners */
-}
 
 .technical-skills {
     display: flex;
@@ -252,7 +257,7 @@ section{
 
 .technical-skills .skill {
     font-size: 1.2em; /* Font size for technical skills */
-    color: white; /* Text color */
+    color: black; /* Text color */
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Center the icon and text vertically */
     gap: 0.5em; /* Space between icon and text */
@@ -462,10 +467,12 @@ footer {
     background-repeat: no-repeat; /* Prevents the background from repeating */
 }
 
-.header {
+.header-Service {
     text-align: center;  
     font-size: 5em;
-    margin: 0.5em 0;
+    margin: 50px 0;
+    color:var(--second-background) ;
+    /* margin: 0.5em 0; */
 }
 
 .Service-container {
@@ -536,9 +543,9 @@ form {
     max-width: 400px; /* Set a maximum width for the form */
     margin: auto; /* Center the form */
     padding: 2em; /* Add padding inside the form */
-    background-color: black; /* Set background color of the form */
-    border: 2px solid lemonchiffon; /* Lemon border color */
+    background-color: rgba(255, 255, 255, 0.9); /* Lighter, more visible background color */
     border-radius: 0.5em; /* Round the corners of the form */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for visibility */
 }
 
 form .input-box {
@@ -550,7 +557,7 @@ form .input-box {
 
 .input-box span {
     font-size: 1.2em; /* Adjust font size for better visibility */
-    color: white; /* Change label color to white */
+    color: black; /* Change label color to black */
 }
 
 form input,
@@ -560,8 +567,8 @@ form textarea {
     border-radius: 0.5em; /* Keep border-radius */
     border: none; /* Remove default border */
     outline: none; /* Remove outline on focus */
-    color: white; /* Set text color to white */
-    background-color: transparent; /* Set background to transparent */
+    color: black; /* Set text color to black */
+    background-color: rgba(240, 240, 240, 0.9); /* Set input background to a light gray */
 }
 
 form input:focus,
@@ -570,13 +577,20 @@ form textarea:focus {
 }
 
 form .btn {
-    background-color: lemonchiffon; /* Button background color */
+    
     color: black; /* Button text color */
-    padding: 0.7em 2em; /* Button padding */
+    padding: 0px; /* Button padding */
     border: none; /* Remove border */
-    border-radius: 0.5em; /* Round the corners of the button */
+    border-radius: 0.5em; /* Add border-radius for rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    
 }
+
+form .btn:hover {
+    color: black; /* Change text color on hover */
+}
+
 
 
 footer{
@@ -952,7 +966,7 @@ ul.links {
     font-size: 4em;
     text-align: center;
     color: white;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
 }
 
 .header i {
@@ -999,7 +1013,7 @@ ul.links {
     font-size: 4em;
     text-align: center;
     color: #333;
-    margin-bottom: 3em;
+    /* margin-bottom: 3em; */
 }
 
 .header i {
