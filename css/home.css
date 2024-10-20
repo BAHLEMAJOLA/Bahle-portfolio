@@ -1,0 +1,315 @@
+
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: black;
+    padding: 3em 0; /* Added padding for better spacing */
+    background-color: var(--background); /* Use a background color from your CSS variables */
+}
+
+#home img {
+    width: 18vw;
+    height: 18vw; /* Ensures the image maintains a circular shape */
+    border-radius: 50%; /* Circular shape */
+    margin-top: 89px;
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+    border: 2px solid #fff; /* Optional: add a border for better visual appeal */
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+    max-width: 600px;
+}
+
+.info-box h1 {
+    font-size: 4em; /* Adjusted size for better readability */
+    font-weight: 500;
+    color: #ff4081; /* Bright color for emphasis */
+}
+
+.info-box h3 {
+    font-size: 2.5em; /* Slightly larger for emphasis */
+    font-weight: 400;
+    color: #00e676; /* Bright green for a fresh look */
+}
+
+.info-box p {
+    opacity: 0.9; /* Slightly higher opacity for better readability */
+    font-size: 1.2em; /* Increased size for readability */
+}
+
+.btn-box {
+    display: flex;
+    gap: 1em; /* Space between buttons */
+}
+
+.btn {
+    background-color: #ff5722; /* Bright color for buttons */
+    color: white;
+    padding: 0.5em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e64a19; /* Darker shade on hover */
+}
+
+.btn-box{
+    display: flex;
+    gap: 1em;
+}
+.btn-box .btn:nth-of-type(2){
+    background-color: white;
+    color: var(--background);
+}
+.btn-box .btn:nth-of-type(2):hover{
+    background-color: var(--background);
+    color: white;
+}
+::-webkit-scrollbar{
+    width: 20px;
+    background-color: var(--background);
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom,6cff52,#3ec5ff) ;
+}
+
+
+
+  /* Achievements Section */
+  #achievements {
+    background-image: url('../images/AC.avif'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 4em 0;
+    text-align: center;
+}
+
+#achievements .header {
+    font-size: 3em;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2em;
+}
+
+/* Flip Box Container */
+.achievement-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+/* Flip Box Styling */
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and Back of Flip Box */
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+/* Front Side */
+.flip-box-front {
+    background-color: #ff5733; /* First box color */
+}
+
+/* Back Side */
+.flip-box-back {
+    background-color: #33b5ff; /* Second box color */
+    transform: rotateY(180deg);
+}
+
+/* Video and Image Styling */
+.flip-box-back video, .flip-box-back img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0.5em;
+}
+
+/* Make Text Clear and Visible */
+.flip-box h2 {
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .achievement-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flip-box {
+        width: 90%;
+        height: 250px;
+    }
+}
+
+#projects {
+    background-image: url('../images/BK.avif'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 4em;
+}
+
+.header {
+    font-size: 4em;
+    text-align: center;
+    color: white;
+    /* margin-bottom: 2em; */
+}
+
+.header i {
+    font-size: 1.5em;
+    color: lemonchiffon; /* Icon color */
+    margin-right: 0.5em;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+}
+
+.card {
+    background-color: #3b3a59; /* Appealing color for the cards */
+    padding: 2em;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 1.2em;
+}
+
+.card h2 {
+    margin-bottom: 0.5em;
+    color: #e4d1f2; /* Soft color for the titles */
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+
+
+#experience {
+    background-color: #f0f2f5; /* Light background for contrast */
+    padding: 4em;
+    background-image: url('../images/background.jpg'); /* Background picture */
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    font-size: 4em;
+    text-align: center;
+    color: #333;
+    /* margin-bottom: 3em; */
+}
+
+.header i {
+    font-size: 1.5em;
+    color: #f7c08a; /* Icon color */
+    margin-right: 0.5em;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+}
+
+.timeline-item .icon {
+    background-color: #e4d1f2; /* Light color for icon background */
+    border-radius: 50%;
+    padding: 1em;
+    margin-right: 2em;
+    color: #333;
+    font-size: 2em;
+}
+
+.timeline-item .content {
+    background-color: #ffffff;
+    padding: 1.5em 2em;
+    border-radius: 0.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.timeline-item h3 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.timeline-item .date {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 1em;
+}
+
+.timeline-item p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-item .icon {
+        margin-bottom: 1em;
+    }
+}

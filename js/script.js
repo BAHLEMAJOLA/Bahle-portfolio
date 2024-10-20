@@ -6,9 +6,11 @@ function showSection(sectionId) {
         section.classList.add('hidden');
     });
 
-    // Show the clicked section
-    const targetSection = document.getElementById(sectionId);
-    targetSection.classList.remove('hidden');
+
+        const selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.classList.toggle('active');
+            selectedSection.classList.toggle('hidden');
 }
 
 // Your dropdown menu functionality
@@ -48,5 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
             contactBtn.classList.remove('active');
         });
     });
-});
-
+})};

@@ -1,0 +1,25 @@
+/* Contact Section */
+#Contact {
+    background: url('../images/contact-background.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+}
+
+#Contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+#Contact .input-box {
+    margin-bottom: 20px;
+}
+
+#Contact .input-box input,
+#Contact .input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
