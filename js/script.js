@@ -144,3 +144,91 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial check for screen size on page load
     window.dispatchEvent(new Event('resize'));
 
+//chatbot
+
+
+// Toggle chatbot open and close
+function toggleChatbot() {
+    var chatbotContainer = document.getElementById("chatbot-container");
+    var chatbotIcon = document.getElementById("chatbot-icon");
+
+    if (chatbotContainer.classList.contains("hidden")) {
+        chatbotContainer.classList.remove("hidden");
+        chatbotContainer.classList.add("active");
+        chatbotIcon.style.display = "none";  // Hide icon
+    } else {
+        chatbotContainer.classList.add("hidden");
+        chatbotContainer.classList.remove("active");
+        chatbotIcon.style.display = "block";  // Show icon
+    }
+}
+
+// Handle sending messages and bot responses
+function sendMessage() {
+    var userMessage = document.getElementById("user-message").value;
+    var chatBox = document.getElementById("chat-box");
+
+    if (userMessage === "") {
+        return;
+    }
+
+    // Display user message
+    var userDiv = document.createElement("div");
+    userDiv.classList.add("user-message");
+    userDiv.innerHTML = `<p>${userMessage}</p>`;
+    chatBox.appendChild(userDiv);
+
+    // Clear input field
+    document.getElementById("user-message").value = "";
+
+    // Scroll to bottom of the chat box
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    // Bot response after user message
+    setTimeout(function () {
+        botResponse(userMessage);
+    }, 500);
+}
+
+// Bot responses based on user input
+function botResponse(message) {
+    var chatBox = document.getElementById("chat-box");
+    var botDiv = document.createElement("div");
+    botDiv.classList.add("bot-message");
+
+    if (message === "1") {
+        botDiv.innerHTML = `<p>🛠️ My skills include HTML, CSS, JavaScript, Python, and more!</p>`;
+    } else if (message === "2") {
+        botDiv.innerHTML = `<p>💼 I have experience working as an IT Technician and Web Developer. I've also participated in various hackathons and tech events!</p>`;
+    } else if (message === "3") {
+        botDiv.innerHTML = `<p>📞 You can contact me via email at ntshayisabuhle@gmail.com or WhatsApp at +27-1234-5678.</p>`;
+    } else if (message === "4") {
+        botDiv.innerHTML = `<p>📝 I worked on projects such as IMS (Employee Clocking System), Secure Academy, and Departmental Websites.</p>`;
+    } else if (message === "5") {
+        botDiv.innerHTML = `<p>🕐 I'm available Monday to Friday, 9 AM - 5 PM.</p>`;
+    } else if (message === "6") {
+        botDiv.innerHTML = `<p>💬 Please leave your name and contact details, and I'll get back to you:</p>`;
+        // Input form for contact details
+        botDiv.innerHTML += `
+            <input type="text" id="user-name" placeholder="Your Name">
+            <input type="text" id="user-contact" placeholder="Your Contact Details">
+            <button onclick="saveContact()">Submit</button>`;
+    } else {
+        botDiv.innerHTML = `<p>Sorry, I didn't understand that. Please choose one of the options: 1, 2, 3, 4, 5, or 6.</p>`;
+    }
+
+    chatBox.appendChild(botDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// Save contact details (for demo purposes)
+function saveContact() {
+    var userName = document.getElementById("user-name").value;
+    var userContact = document.getElementById("user-contact").value;
+
+    if (userName && userContact) {
+        alert(`Thank you ${userName}! We'll get back to you via ${userContact}.`);
+    } else {
+        alert('Please provide both your name and contact details.');
+    }
+}

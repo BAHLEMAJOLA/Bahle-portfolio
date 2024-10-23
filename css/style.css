@@ -554,6 +554,120 @@ footer {
     min-width: 20px;
     border-radius: 0.5em;
 }
+
+/* Chatbot Icon */
+.chatbot-icon {
+    font-size: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff69b4; /* hot pink */
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Chatbot Container (Initially Hidden) */
+.chatbot-container {
+    width: 300px;
+    height: 400px;
+    background-color: #ffe4e1; /* light pink */
+    border-radius: 15px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+}
+
+/* Show chatbot when open */
+.chatbot-container.active {
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Chat Header */
+.chat-header {
+    background-color: #ff69b4;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Chat Box */
+.chat-box {
+    padding: 10px;
+    height: 270px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Bot Message */
+.bot-message {
+    background-color: #ffb6c1; /* light pink */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: black;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* User Input */
+.user-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.user-input input {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ff69b4;
+    border-radius: 5px;
+}
+
+.user-input button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* List Style for Bot */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
 /* Contact Section */
 #Contact {
     padding: 60px 20px;
