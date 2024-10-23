@@ -113,3 +113,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+    // Mobile Menu Toggle
+    document.getElementById('mobileMenuIcon').onclick = function() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('active'); // Toggle the 'active' class for styles
+    };
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Dynamic Resizing
+    window.addEventListener('resize', function() {
+        const navbar = document.getElementById('navbar');
+        
+        if (window.innerWidth > 768) {
+            navbar.classList.remove('active'); // Ensure the navbar is visible on larger screens
+        }
+    });
+
+    // Initial check for screen size on page load
+    window.dispatchEvent(new Event('resize'));
+

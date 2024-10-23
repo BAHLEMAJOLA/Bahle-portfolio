@@ -214,6 +214,29 @@ section{
     margin-bottom: 20px;
 }
 
+/* Style for the navbar */
+nav {
+    display: none; /* Hide by default */
+}
+
+nav.active {
+    display: block; /* Show when active */
+}
+
+.mobile-menu-icon {
+    display: none; /* Hide the icon on larger screens */
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block; /* Show the icon on smaller screens */
+    }
+    nav {
+        display: block; /* Allow the navbar to be displayed */
+    }
+}
+
+
 /* Soft Skills Styling */
 .softskill-container, .technical-skills {
     flex: 1;
