@@ -295,8 +295,7 @@ nav.active {
         transform: translateX(0);
     }
 }
-
-
+/*nav bar */
 /* General Styling */
 nav {
     display: flex;
@@ -356,6 +355,17 @@ nav {
     display: block;
 }
 
+/* Hamburger Menu */
+#menu {
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    display: none; /* Hide on larger screens */
+}
+
+#menu.active {
+    /* Optional: you can add styles for the active state of the icon */
+}
 
 /* Button */
 .btn {
@@ -366,22 +376,21 @@ nav {
     text-decoration: none;
 }
 
-#menu {
-    font-size: 2em;
-    color: white;
-    cursor: pointer;
-}
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
     nav {
-        flex-direction: column; /* Stack nav items vertically */
-        align-items: flex-start; /* Align items to the start */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #menu {
+        display: block; /* Show hamburger icon on mobile */
     }
 
     .links {
-        flex-direction: column; /* Stack links vertically */
-        display: none; /* Initially hide links */
-        width: 100%; /* Full width for links */
+        flex-direction: column;
+        display: none; /* Initially hide links on mobile */
+        width: 100%;
     }
 
     .links.active {
@@ -389,29 +398,18 @@ nav {
     }
 
     .links li {
-        width: 100%; /* Full width for each link */
-        text-align: center; /* Center text */
+        width: 100%;
+        text-align: center;
     }
 
     .dropdown-content {
-        position: absolute; /* Changed to absolute for better positioning */
-        background-color: #333;
-        box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Add some shadow for visibility */
-        display: none; /* Initially hide dropdown content */
-        z-index: 1; /* Ensure it appears above other elements */
-        width: 100%; /* Full width for dropdown */
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: none; /* Disable hover effect on mobile */
+        position: static;
+        display: none; /* Initially hide dropdown */
+        width: 100%;
     }
 
     .dropdown.active .dropdown-content {
-        display: block; /* Show dropdown when active */
-    }
-
-    #menu.active + .links {
-        display: flex; /* Show links when menu is active */
+        display: block; /* Show dropdown when clicked */
     }
 }
 
@@ -569,9 +567,9 @@ footer {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Chatbot Container (Initially Hidden) */
+/* Chatbot Container */
 .chatbot-container {
-    width: 300px;
+    width: 300px;  /* Adjusted to fit more content without scrolling */
     height: 400px;
     background-color: #ffe4e1; /* light pink */
     border-radius: 15px;
@@ -586,10 +584,6 @@ footer {
 /* Show chatbot when open */
 .chatbot-container.active {
     display: flex;
-}
-
-.hidden {
-    display: none;
 }
 
 /* Chat Header */
@@ -664,6 +658,24 @@ footer {
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+}
+
+/* Ensure the list items stack in a clear two-column format */
+ul#options-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+    gap: 10px; /* Add some space between items */
+}
+
+/* Responsive for smaller screens: display options vertically */
+@media (max-width: 320px) {
+    ul#options-list {
+        grid-template-columns: 1fr; /* Stack vertically on smaller screens */
+    }
+}
+.hidden {
+    display: none !important;
 }
 
 

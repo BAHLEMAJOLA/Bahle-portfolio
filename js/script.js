@@ -145,8 +145,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.dispatchEvent(new Event('resize'));
 
 //chatbot
-
-
 // Toggle chatbot open and close
 function toggleChatbot() {
     var chatbotContainer = document.getElementById("chatbot-container");
@@ -160,6 +158,21 @@ function toggleChatbot() {
         chatbotContainer.classList.add("hidden");
         chatbotContainer.classList.remove("active");
         chatbotIcon.style.display = "block";  // Show icon
+    }
+}
+
+
+// Toggle menu options
+function toggleMenu() {
+    var optionsList = document.getElementById("options-list");
+    var menuButton = document.getElementById("menu-toggle");
+
+    if (optionsList.classList.contains("hidden")) {
+        optionsList.classList.remove("hidden");
+        menuButton.textContent = "Hide Options";
+    } else {
+        optionsList.classList.add("hidden");
+        menuButton.textContent = "Show Options";
     }
 }
 
@@ -210,8 +223,8 @@ function botResponse(message) {
         botDiv.innerHTML = `<p>💬 Please leave your name and contact details, and I'll get back to you:</p>`;
         // Input form for contact details
         botDiv.innerHTML += `
-            <input type="text" id="user-name" placeholder="Your Name">
-            <input type="text" id="user-contact" placeholder="Your Contact Details">
+            <input type="text" id="user-name" placeholder="Your Name" required>
+            <input type="text" id="user-contact" placeholder="Your Contact Details (Email/Phone)" required>
             <button onclick="saveContact()">Submit</button>`;
     } else {
         botDiv.innerHTML = `<p>Sorry, I didn't understand that. Please choose one of the options: 1, 2, 3, 4, 5, or 6.</p>`;
@@ -221,14 +234,40 @@ function botResponse(message) {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// Save contact details (for demo purposes)
+// Save contact details
 function saveContact() {
     var userName = document.getElementById("user-name").value;
     var userContact = document.getElementById("user-contact").value;
 
     if (userName && userContact) {
-        alert(`Thank you ${userName}! We'll get back to you via ${userContact}.`);
+        // You can replace this alert with an email notification function in the future
+        alert(`Thank you ${userName}! We'll get back to you at ${userContact}.`);
+
+        // Reset input fields
+        document.getElementById("user-name").value = "";
+        document.getElementById("user-contact").value = "";
+
+        // Respond with a confirmation message
+        var chatBox = document.getElementById("chat-box");
+        var confirmationDiv = document.createElement("div");
+        confirmationDiv.classList.add("bot-message");
+        confirmationDiv.innerHTML = `<p>😊 Your details have been submitted! I will contact you soon.</p>`;
+        chatBox.appendChild(confirmationDiv);
+        chatBox.scrollTop = chatBox.scrollHeight;
     } else {
         alert('Please provide both your name and contact details.');
     }
 }
+// humburgar
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelector('.links');
+    const menuIcon = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuIcon.classList.toggle('active');
+    });
+});
+
+
+
