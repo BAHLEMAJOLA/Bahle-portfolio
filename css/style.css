@@ -8,6 +8,8 @@
     scroll-behavior: smooth;
     font-family: "Poppins";
   }
+
+  
   :root {
     --background: rgb(24, 24, 24);
     --second-background: rgb(21, 21, 21);
@@ -488,7 +490,7 @@ footer {
 
 
 #Service {
-    background-image: url('../images/DD.jpg'); /* Add your background image path here */
+    background-image: url('../images/CONTACT.avif'); /* Add your background image path here */
     background-size: cover; /* Ensures the background covers the entire section */
     background-position: center; /* Centers the background image */
     background-repeat: no-repeat; /* Prevents the background from repeating */
@@ -1195,7 +1197,7 @@ ul.links {
 }
 
 #projects {
-    background-image: url('../images/BK.avif'); /* Replace with your background image */
+    background-image: url('../images/CONTACT.avif'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
     padding: 4em;
@@ -1204,14 +1206,17 @@ ul.links {
 .header {
     font-size: 4em;
     text-align: center;
-    color: white;
+    color: black;
     /* margin-bottom: 2em; */
 }
 
 .header i {
     font-size: 1.5em;
-    color: lemonchiffon; /* Icon color */
+    color: black; /* Icon color */
     margin-right: 0.5em;
+}
+.header span {
+    color: black; /* This ensures the "Projects" text is black */
 }
 
 .project-container {
@@ -1241,23 +1246,35 @@ ul.links {
 
 
 #experience {
-    background-color: #f0f2f5; /* Light background for contrast */
+    background-color: black; /* Light background for contrast */
     padding: 4em;
-    background-image: url('../images/background.jpg'); /* Background picture */
+    background-image: url('../images/CONTACT.avif'); /* Background picture */
     background-size: cover;
     background-position: center;
+}
+.header h2 {
+    display: flex;
+    align-items: center;
+    font-size: 24px; /* Adjust font size as needed */
+    color: black; /* Set the "Experience" text color to black */
+}
+
+.header h2 i {
+    margin-right: 8px; /* Space between the icon and the text */
+    font-size: 1.2em; /* Adjust icon size as needed */
+    color: gray; /* Optional: set icon color if you want it different from the text */
 }
 
 .header {
     font-size: 4em;
     text-align: center;
-    color: #333;
+    color:black;
     /* margin-bottom: 3em; */
 }
 
 .header i {
     font-size: 1.5em;
-    color: #f7c08a; /* Icon color */
+    color: black; /* Icon color */
     margin-right: 0.5em;
 }
 

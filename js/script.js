@@ -221,6 +221,7 @@ function botResponse(message) {
         botDiv.innerHTML = `<p>🕐 I'm available for 24 hours</p>`;
     } else if (message === "6") {
         botDiv.innerHTML = `<p>💬 Please leave your name and contact details, and I'll get back to you:</p>`;
+        
         // Input form for contact details
         botDiv.innerHTML += `
             <input type="text" id="user-name" placeholder="Your Name" required>
@@ -258,6 +259,35 @@ function saveContact() {
         alert('Please provide both your name and contact details.');
     }
 }
+
+// Handle option selection from dropdown
+function handleOptionSelect() {
+    var selectedOption = document.getElementById("options-list").value;
+    if (selectedOption) {
+        botResponse(selectedOption);
+    }
+}
+
+// Append user message
+function appendUserMessage(message) {
+    var chatBox = document.getElementById("chat-box");
+    var userDiv = document.createElement("div");
+    userDiv.classList.add("user-message");
+    userDiv.innerHTML = `<p>${message}</p>`;
+    chatBox.appendChild(userDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// Append bot message
+function appendBotMessage(response) {
+    var chatBox = document.getElementById("chat-box");
+    var botDiv = document.createElement("div");
+    botDiv.classList.add("bot-message");
+    botDiv.innerHTML = `<p>${response}</p>`;
+    chatBox.appendChild(botDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
 // humburgar
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.links');

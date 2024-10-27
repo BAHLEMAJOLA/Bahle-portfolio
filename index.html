@@ -61,15 +61,17 @@
                 </div>
                 <div class="bot-message">
                     <p>Choose one of the following options:</p>
-                    <ul>
-                        <li>1. 🛠️ My Skills</li>
-                        <li>2. 💼 My Experience</li>
-                        <li>3. 📞 Contact Information</li>
-                        <li>4. 📝 Projects</li>
-                        <li>5. 🕐 Availability</li>
-                        <li>6. 💬 Leave your details</li>
-                    </ul>
+                    <select id="options-list" onchange="handleOptionSelect()">
+                        <option value="">Select an option</option>
+                        <option value="1">1. 🛠️ My Skills</option>
+                        <option value="2">2. 💼 My Experience</option>
+                        <option value="3">3. 📞 Contact Information</option>
+                        <option value="4">4. 📝 Projects</option>
+                        <option value="5">5. 🕐 Availability</option>
+                        <option value="6">6. 💬 Leave your details</option>
+                    </select>
                 </div>
+                
             </div>
             <div class="user-input">
                 <input type="text" id="user-message" placeholder="Type your option here...">
