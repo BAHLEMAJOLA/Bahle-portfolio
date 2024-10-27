@@ -218,7 +218,7 @@ function botResponse(message) {
     } else if (message === "4") {
         botDiv.innerHTML = `<p>📝 I worked on projects such as IMS (Employee Clocking System), Secure Academy, and Departmental Websites.</p>`;
     } else if (message === "5") {
-        botDiv.innerHTML = `<p>🕐 I'm available Monday to Friday, 9 AM - 5 PM.</p>`;
+        botDiv.innerHTML = `<p>🕐 I'm available for 24 hours</p>`;
     } else if (message === "6") {
         botDiv.innerHTML = `<p>💬 Please leave your name and contact details, and I'll get back to you:</p>`;
         // Input form for contact details
