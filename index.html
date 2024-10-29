@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    
+
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./css/bot.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 </head>
+
 <body>
     <div class="mobile-menu-icon" id="mobileMenuIcon">
         <i class="bx bx-menu"></i>
     </div>
-    <nav> 
+    <nav>
         <a href="#" class="logo">
             <span>Bahle</span>
         </a>
@@ -33,13 +33,13 @@
                     <a href="#projects" onclick="showSection('projects')">Projects</a>
                     <a href="#work-experience" onclick="showSection('work-experience')">Work Experience</a>
                 </div>
-                
+
             </li>
         </ul>
         <i class='bx bx-menu-alt-right' id="menu"></i>
         <a href="#Contact" class="btn">Contact Me</a>
     </nav>
-    
+
 
 
     <!-- Chatbot Icon -->
@@ -49,55 +49,36 @@
 
 
 
-        <!-- Chatbot Container (Initially Hidden) -->
-        <div id="chatbot-container" class="chatbot-container hidden">
-            <div class="chat-header">
-                <h2>Bahle's Assistant 🤖</h2>
-                <button class="close-btn" onclick="toggleChatbot()">✖</button>
-            </div>
-            <div id="chat-box" class="chat-box">
-                <div class="bot-message">
-                    <p>Hi! 😊 I'm Bahle's Assistant. How can I help you today?</p>
-                </div>
-                <div class="bot-message">
-                    <p>Choose one of the following options:</p>
-                    <select id="options-list" onchange="handleOptionSelect()">
-                        <option value="">Select an option</option>
-                        <option value="1">1. 🛠️ My Skills</option>
-                        <option value="2">2. 💼 My Experience</option>
-                        <option value="3">3. 📞 Contact Information</option>
-                        <option value="4">4. 📝 Projects</option>
-                        <option value="5">5. 🕐 Availability</option>
-                        <option value="6">6. 💬 Leave your details</option>
-                    </select>
-                </div>
-                
-            </div>
-            <div class="user-input">
-                <input type="text" id="user-message" placeholder="Type your option here...">
-                <button onclick="sendMessage()">Send</button>
-            </div>
-        </div>
+
+    <div class="user-input">
+        <input type="text" id="user-message" placeholder="Type your option here...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    </div>
 
     <section id="home">
         <img src="images/image.jpg" alt="Profile Picture">
         <div class="info-box">
             <h2>Hello, I'M Bahle</h2>
-            <h3>Software Developer  based in GP</h3>
-            <p>Welcome to my portfolio website. I specialize in creating dynamic and beautiful web pages. Let’s work together to make something great!</p>
+            <h3>Software Developer based in GP</h3>
+            <p>Welcome to my portfolio website. I specialize in creating dynamic and beautiful web pages. Let’s work
+                together to make something great!</p>
         </div>
         <div class="btn-box">
-            <a href="docs/bahle.pdf" download class="btn download-cv">Download CV</a> <!-- Added href to point to the CV file -->
-            
+            <a href="docs/bahle.pdf" download class="btn download-cv">Download CV</a>
+            <!-- Added href to point to the CV file -->
+
         </div>
     </section>
     <section id="about">
         <div class="about-box">
             <h2 class="about-header">About Bahle</h2>
             <div class="text-container">
-                <p class="about-me">I am a passionate web designer and developer with experience in creating visually appealing and functional websites. I enjoy tackling challenging projects and continuously improving my skills. I thrive in tech environments and love learning new programming languages.</p>
+                <p class="about-me">I am a passionate web designer and developer with experience in creating visually
+                    appealing and functional websites. I enjoy tackling challenging projects and continuously improving
+                    my skills. I thrive in tech environments and love learning new programming languages.</p>
             </div>
-    
+
             <div class="tech-soft-skills">
                 <!-- Soft Skills Section -->
                 <div class="softskill-container">
@@ -120,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Technical Skills Section -->
                 <div class="technical-skills">
                     <h2 class="skills-title">Technical Skills</h2>
@@ -151,13 +132,13 @@
             </div>
         </div>
     </section>
-    
-    
-    
-    
+
+
+
+
     <!-- Include Font Awesome from CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+
 
     <section id="Service">
         <h1 class="header-Service">Service</h1>
@@ -179,11 +160,11 @@
             </div>
         </div>
     </section>
-   
+
     <section id="Contact">
         <h1>Contact Me</h1>
         <div class="contact-container">
-            <form action="https://formspree.io/f/xzzbbjbw"  method="post">
+            <form action="https://formspree.io/f/xzzbbjbw" method="post">
                 <div class="input-box">
                     <input type="text" name="name" required>
                     <label>Full Name</label>
@@ -206,159 +187,191 @@
             </form>
         </div>
     </section>
-    
-   
-<!-- Hidden Sections (Achievements, Projects, Work Experience) -->
-<!-- Achievements Section -->
-<section id="achievements" class="section hidden">
-    <h1 class="header">Achievements</h1>
-    <div class="achievement-container">
-        
-        <!-- First Achievement Box with Video -->
-        <div class="flip-box">
-            <div class="flip-box-inner">
-                <div class="flip-box-front">
-                    <h2>IT Summit</h2>
+
+
+    <!-- Hidden Sections (Achievements, Projects, Work Experience) -->
+    <!-- Achievements Section -->
+    <section id="achievements" class="section hidden">
+        <h1 class="header">Achievements</h1>
+        <div class="achievement-container">
+
+            <!-- First Achievement Box with Video -->
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>IT Summit</h2>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="content">
+                            <h3>2022 IT Summit</h3>
+                            <p>This video showcases my participation in the 2022 IT Summit, where I presented innovative
+                                tech solutions and networked with industry leaders.</p>
+                            <p>During the summit, I was selected to showcase my project, which focused on leveraging
+                                technology for social impact. The experience provided me with invaluable insights and
+                                connections.</p>
+                            <button class="read-more-btn" data-modal="videoModal">Watch Video</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="flip-box-back">
-                    <div class="content">
-                        <h3>2022 IT Summit</h3>
-                        <p>This video showcases my participation in the 2022 IT Summit, where I presented innovative tech solutions and networked with industry leaders.</p>
-                        <p>During the summit, I was selected to showcase my project, which focused on leveraging technology for social impact. The experience provided me with invaluable insights and connections.</p>
-                        <button class="read-more-btn" data-modal="videoModal">Watch Video</button>
+            </div>
+
+            <!-- Second Achievement Box with Picture -->
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>Hackathon</h2>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="content">
+                            <h3>National Hackathon</h3>
+                            <p>Won first place in a 48-hour coding marathon, building an AI-powered solution that
+                                addressed local community challenges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Achievement Box with PAICTA Picture -->
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <h2>PAICTA Certification</h2>
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="content">
+                            <h3>PAICTA Graduate</h3>
+                            <p>Graduated with distinction in PAICTA's Software Development program. This certification
+                                enhanced my skills in programming and project management.</p>
+                            <img src="images/paicta.jpg" alt="PAICTA Certification" style="width:100%; height:auto;">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Second Achievement Box with Picture -->
-        <div class="flip-box">
-            <div class="flip-box-inner">
-                <div class="flip-box-front">
-                    <h2>Hackathon</h2>
-                </div>
-                <div class="flip-box-back">
-                    <div class="content">
-                        <h3>National Hackathon</h3>
-                        <p>Won first place in a 48-hour coding marathon, building an AI-powered solution that addressed local community challenges.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Third Achievement Box with PAICTA Picture -->
-        <div class="flip-box">
-            <div class="flip-box-inner">
-                <div class="flip-box-front">
-                    <h2>PAICTA Certification</h2>
-                </div>
-                <div class="flip-box-back">
-                    <div class="content">
-                        <h3>PAICTA Graduate</h3>
-                        <p>Graduated with distinction in PAICTA's Software Development program. This certification enhanced my skills in programming and project management.</p>
-                        <img src="images/paicta.jpg" alt="PAICTA Certification" style="width:100%; height:auto;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Read More (Video Modal) -->
-    <div id="videoModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>IT Summit Full Video</h2>
-            <video controls>
-                <source src="video/UJ ROBO.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-</section>
-
-<section id="projects" class="section hidden">
-    <section id="projects" class="hidden-section">
-        <h1 class="header">
-            <i class="bx bx-folder-open"></i>
-            <span>Projects</span>
-        </h1>
-        <div class="project-container">
-            <div class="card">
-                <h2>CLOCKING SYSTEM</h2>
-                <p>I worked on a major project called IMS, a clocking system for employees.<br> It tracked attendance, managed leaves, and monitored employee activity.</p>
-            </div>
-            <div class="card">
-                <h2>Secure Acamedemy</h2>
-                <p> Secure Academy was a system designed for Grade 12 graduates and unemployed youth.<br> It allowed them to register for free certifications and create job profiles.<br> I was part of the team, responsible for the database and registration pages.</p>
-            </div>
-            <div class="card">
-                <h2>Departmental Website </h2>
-                <p>I was part of a team that created a departmental website using WordPress,<br> from start to finish.<br> The website was designed for communication and advertising purposes.</p>
+        <!-- Modal for Read More (Video Modal) -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>IT Summit Full Video</h2>
+                <video controls>
+                    <source src="video/UJ ROBO.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </section>
-    
-</section>
 
-<section id="work-experience" class="section hidden">
-    <section id="experience" class="hidden-section">
-        <h1 class="header">
-            <i class="bx bx-briefcase"></i>
-            <span>Experience</span>
-        </h1>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="icon"><i class="bx bx-laptop"></i></div>
-                <div class="content">
-                    <h3>IT Helpdesk Technician</h3>
-                    <span class="date">October 2022 - july 2024</span>
-                    <p>Provided technical support and troubleshooting for a range of IT issues, improving overall system efficiency for clients.</p>
+    <section id="projects" class="section hidden">
+        <section id="projects" class="hidden-section">
+            <h1 class="header">
+                <i class="bx bx-folder-open"></i>
+                <span>Projects</span>
+            </h1>
+            <div class="project-container">
+                <div class="card">
+                    <h2>CLOCKING SYSTEM</h2>
+                    <p>I worked on a major project called IMS, a clocking system for employees.<br> It tracked
+                        attendance, managed leaves, and monitored employee activity.</p>
+                </div>
+                <div class="card">
+                    <h2>Secure Acamedemy</h2>
+                    <p> Secure Academy was a system designed for Grade 12 graduates and unemployed youth.<br> It allowed
+                        them to register for free certifications and create job profiles.<br> I was part of the team,
+                        responsible for the database and registration pages.</p>
+                </div>
+                <div class="card">
+                    <h2>Departmental Website </h2>
+                    <p>I was part of a team that created a departmental website using WordPress,<br> from start to
+                        finish.<br> The website was designed for communication and advertising purposes.</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="icon"><i class="bx bx-code"></i></div>
-                <div class="content">
-                    <h3>Web Developer - Remotely </h3>
-                    <span class="date">September 2022 - September 2023</span>
-                    <p>Worked on various web development projects including personal portfolios and corporate websites.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="icon"><i class="bx bxs-graduation"></i></div>
-                <div class="content">
-                    <h3>Lab Assistant - WSU</h3>
-                    <span class="date">March 2022 - August 2022</span>
-                    <p>Assisted in setting up labs and providing support to students during their practical sessions at W.S.U.</p>
-                </div>
-            </div>
-        </div>
+        </section>
+
     </section>
-    
-</section>
 
-<!-- Shared Footer -->
-
-<footer>
-    <div class="footer-content">
-        <p>© 2024 Bahle Majola</p>
-        <div class="social-icons">
-            <a href="https://github.com/BAHLEMAJOLA" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/bahle-ntshayisa-79b26718b/" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://wa.me/0718095307" target="_blank" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+    <section id="work-experience" class="section hidden">
+        <section id="experience" class="hidden-section">
+            <h1 class="header">
+                <i class="bx bx-briefcase"></i>
+                <span>Experience</span>
+            </h1>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="icon"><i class="bx bx-laptop"></i></div>
+                    <div class="content">
+                        <h3>IT Helpdesk Technician</h3>
+                        <span class="date">October 2022 - july 2024</span>
+                        <p>Provided technical support and troubleshooting for a range of IT issues, improving overall
+                            system efficiency for clients.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="icon"><i class="bx bx-code"></i></div>
+                    <div class="content">
+                        <h3>Web Developer - Remotely </h3>
+                        <span class="date">September 2022 - September 2023</span>
+                        <p>Worked on various web development projects including personal portfolios and corporate
+                            websites.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="icon"><i class="bx bxs-graduation"></i></div>
+                    <div class="content">
+                        <h3>Lab Assistant - WSU</h3>
+                        <span class="date">March 2022 - August 2022</span>
+                        <p>Assisted in setting up labs and providing support to students during their practical sessions
+                            at W.S.U.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Chatbot Container (Initially Hidden) -->
+    <div id="chatbot-container" class="chatbot-container hidden">
+        <div class="chat-header">
+            <h2>Bahle's Assistant 🤖</h2>
+            <button class="close-btn" onclick="toggleChatbot()">✖</button>
+        </div>
+        <div id="chat-box" class="chat-box">
+            <div class="bot-message">
+                <p>Hi! 😊 I'm Bahle's Assistant. How can I help you today?</p>
+            </div>
+            <div class="bot-message">
+                <p>Choose one of the following options:</p>
+                <select id="options-list" onchange="handleOptionSelect()">
+                    <option value="">Select an option</option>
+                    <option value="1">1. 🛠️ My Skills</option>
+                    <option value="2">2. 💼 My Experience</option>
+                    <option value="3">3. 📞 Contact Information</option>
+                    <option value="4">4. 📝 Projects</option>
+                    <option value="5">5. 🕐 Availability</option>
+                    <option value="6">6. 💬 Leave your details</option>
+                </select>
+            </div>
         </div>
     </div>
-</footer>
 
+    <!-- Shared Footer -->
 
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Bahle Majola</p>
+            <div class="social-icons">
+                <a href="https://github.com/BAHLEMAJOLA" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/bahle-ntshayisa-79b26718b/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/0718095307" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
     <script src="js/script.js">
-
-        
     </script>
 </body>
+
 </html>
