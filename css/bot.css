@@ -6,7 +6,7 @@
     z-index: 100;
     bottom: 20px;
     right: 20px;
-    background-color: #ff69b4; /* hot pink */
+    background-color: #005bb5; /* hot pink */
     padding: 15px;
     border-radius: 50%;
     cursor: pointer;
@@ -67,7 +67,7 @@
 
 /* Bot Message */
 .bot-message {
-    background-color: #ffb6c1; /* light pink */
+    background-color:#005bb5; /* light pink */
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
